@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package cn.milai.ib.server.sock;
+package cn.milai.ibserver.sock;
 
 message Message {
 	enum MessageType {
