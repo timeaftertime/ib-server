@@ -11,7 +11,7 @@
 	<property name="max.history" value="30" />
 	<!-- 日志文件保存目录 -->
 	<springProfile name="dev">
-		<property name="log.dir" value="D:/tmp/log/" />
+		<property name="log.dir" value="log/" />
 	</springProfile>
 	<springProfile name="prod">
 		<property name="log.dir" value="~/log/" />
@@ -94,14 +94,7 @@
 	</springProfile>
 
 	<!-- 配置记录日志的包 -->
-	<logger name="java.sql.PreparedStatement" value="DEBUG" />
-	<logger name="java.sql.Connection" value="DEBUG" />
-	<logger name="java.sql.Statement" value="DEBUG" />
-	<logger name="com.ibatis" value="DEBUG" />
-	<logger name="com.ibatis.common.jdbc.SimpleDataSource" value="DEBUG" />
-	<logger name="com.ibatis.common.jdbc.ScriptRunner" level="DEBUG" />
-	<logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" value="DEBUG" />
-	<logger name="org.springframework.web" level="DEBUG" />
-	<logger name="cn.milai.ib.server" level="DEBUG" />
+	<logger name="cn.milai.ibserver" level="DEBUG" />
+	<logger name="cn.milai.nexus" level="DEBUG" />
 
 </configuration>

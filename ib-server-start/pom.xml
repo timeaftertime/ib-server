@@ -16,7 +16,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>cn.milai.ib.server.IBServer</mainClass>
+					<mainClass>cn.milai.ibserver.IBServerApplication</mainClass>
 				</configuration>
 				<executions>
 					<execution>
@@ -32,11 +32,23 @@
 	<dependencies>
 		<dependency>
 			<groupId>cn.milai</groupId>
-			<artifactId>ib-server-web</artifactId>
+			<artifactId>ib-server-client</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>cn.milai</groupId>
-			<artifactId>ib-server-sock</artifactId>
+			<artifactId>nexus-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
 		</dependency>
 	</dependencies>
 </project>

@@ -6,19 +6,18 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<properties>
-		<ib-server.version>0.0.1-SNAPSHOT</ib-server.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<beginning.version>0.0.1-SNAPSHOT</beginning.version>
-		<org.mapstruct.version>1.4.1.Final</org.mapstruct.version>
-	</properties>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.4.RELEASE</version>
+		<version>2.2.4.RELEASE</version>
 	</parent>
+
+	<properties>
+		<beginning.version>0.0.1-SNAPSHOT</beginning.version>
+		<nexus.version>0.0.1-SNAPSHOT</nexus.version>
+		<ib-server.version>0.0.1-SNAPSHOT</ib-server.version>
+		<org.mapstruct.version>1.4.1.Final</org.mapstruct.version>
+	</properties>
 
 	<build>
 		<plugins>
@@ -29,14 +28,7 @@
 					<source>1.8</source>
 					<target>1.8</target>
 					<encoding>UTF-8</encoding>
-					<skip>true</skip>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>org.mapstruct</groupId>
-							<artifactId>mapstruct-processor</artifactId>
-							<version>${org.mapstruct.version}</version>
-						</path>
-					</annotationProcessorPaths>
+					<skip>false</skip>
 				</configuration>
 			</plugin>
 			<!-- 批量更新子模块版本号：mvn -N versions:update-child-modules   -->
@@ -59,51 +51,24 @@
 			</dependency>
 			<dependency>
 				<groupId>cn.milai</groupId>
-				<artifactId>ib-server-api</artifactId>
-				<version>${ib-server.version}</version>
+				<artifactId>nexus-core</artifactId>
+				<version>${nexus.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>cn.milai</groupId>
-				<artifactId>ib-server-web</artifactId>
+				<artifactId>ib-server-client</artifactId>
 				<version>${ib-server.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>cn.milai</groupId>
-				<artifactId>ib-server-sock</artifactId>
-				<version>${ib-server.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>fastjson</artifactId>
-				<version>1.2.58</version>
-			</dependency>
-			<dependency>
-				<groupId>com.google.protobuf</groupId>
-				<artifactId>protobuf-java</artifactId>
-				<version>3.14.0</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mybatis.spring.boot</groupId>
-				<artifactId>mybatis-spring-boot-starter</artifactId>
-				<version>2.0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.mapstruct</groupId>
 				<artifactId>mapstruct</artifactId>
-				<version>${org.mapstruct.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-classic</artifactId>
-				<version>1.2.3</version>
+				<version>1.4.1.Final</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<modules>
-		<module>ib-server-web</module>
-		<module>ib-server-sock</module>
 		<module>ib-server-start</module>
-		<module>ib-server-api</module>
+		<module>ib-server-client</module>
 	</modules>
 </project>

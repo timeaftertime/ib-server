@@ -1,28 +1,33 @@
 package cn.milai.ibserver;
 
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-
-import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
 
-import io.netty.channel.ChannelHandlerContext;
+import cn.milai.ibserver.service.MemoryUserService;
+import cn.milai.ibserver.service.UserService;
 
-@MapperScan(basePackages = { "cn.milai.ibserver.web.dao" })
+/**
+ * ibserver 配置
+ * @author milai
+ * @date 2021.01.14
+ */
 @Configuration
 public class IBServerConfig {
 
 	@Bean
-	public Map<Integer, ChannelHandlerContext> onlines() {
-		return new ConcurrentHashMap<>();
+	public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
+		RedisTemplate<String, Object> template = new RedisTemplate<>();
+		template.setConnectionFactory(factory);
+		return template;
 	}
 
 	@Bean
-	public Set<ChannelHandlerContext> waitForToken() {
-		return new HashSet<>();
+	@ConditionalOnMissingBean(value = UserService.class)
+	public MemoryUserService memoryUserService() {
+		return new MemoryUserService();
 	}
 
 }
