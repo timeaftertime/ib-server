@@ -13,8 +13,8 @@
 	</parent>
 
 	<properties>
-		<beginning.version>0.0.1-SNAPSHOT</beginning.version>
-		<nexus.version>0.0.1-SNAPSHOT</nexus.version>
+		<beginning.version>0.0.2-SNAPSHOT</beginning.version>
+		<nexus.version>0.0.2-SNAPSHOT</nexus.version>
 		<ib-server.version>0.0.1-SNAPSHOT</ib-server.version>
 		<org.mapstruct.version>1.4.1.Final</org.mapstruct.version>
 	</properties>
@@ -30,6 +30,22 @@
 					<encoding>UTF-8</encoding>
 					<skip>false</skip>
 				</configuration>
+			</plugin>
+			<!-- 打包源码 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<!-- 批量更新子模块版本号：mvn -N versions:update-child-modules   -->
 			<plugin>
