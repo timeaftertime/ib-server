@@ -29,7 +29,7 @@ public class MemoryUserService implements UserService {
 	public Resp<LoginResp> login(LoginReq req) {
 		long userId = nowUserId.incrementAndGet();
 		String token = Digests.sha256(
-			String.format("%d_%d_%s", userId, new Date().getTime(), Randoms.randLowerOrDigit(RAND_LENGTH))
+			String.format("%d_%d_%s", userId, new Date().getTime(), Randoms.fixedLowerDigit(RAND_LENGTH))
 		);
 		tokenToId.put(token, userId);
 		idToToken.put(userId, token);
