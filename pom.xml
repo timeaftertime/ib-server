@@ -9,14 +9,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.4.RELEASE</version>
+		<version>2.4.3</version>
 	</parent>
 
 	<properties>
 		<beginning.version>0.0.2-SNAPSHOT</beginning.version>
 		<nexus.version>0.0.2-SNAPSHOT</nexus.version>
 		<ib-server.version>0.0.1-SNAPSHOT</ib-server.version>
-		<org.mapstruct.version>1.4.1.Final</org.mapstruct.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<build>
@@ -28,7 +28,6 @@
 					<source>1.8</source>
 					<target>1.8</target>
 					<encoding>UTF-8</encoding>
-					<skip>false</skip>
 				</configuration>
 			</plugin>
 			<!-- 打包源码 -->
@@ -74,11 +73,6 @@
 				<groupId>cn.milai</groupId>
 				<artifactId>ib-server-client</artifactId>
 				<version>${ib-server.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mapstruct</groupId>
-				<artifactId>mapstruct</artifactId>
-				<version>1.4.1.Final</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
