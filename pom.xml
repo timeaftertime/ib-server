@@ -15,7 +15,7 @@
 	<properties>
 		<beginning.version>0.0.2-SNAPSHOT</beginning.version>
 		<nexus.version>0.0.2-SNAPSHOT</nexus.version>
-		<ib-server.version>0.0.1-SNAPSHOT</ib-server.version>
+		<ib.server.version>0.0.1-SNAPSHOT</ib.server.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -61,7 +61,7 @@
 		<dependencies>
 			<dependency>
 				<groupId>cn.milai</groupId>
-				<artifactId>beginning-api</artifactId>
+				<artifactId>beginning-decoupling</artifactId>
 				<version>${beginning.version}</version>
 			</dependency>
 			<dependency>
@@ -72,7 +72,7 @@
 			<dependency>
 				<groupId>cn.milai</groupId>
 				<artifactId>ib-server-client</artifactId>
-				<version>${ib-server.version}</version>
+				<version>${ib.server.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

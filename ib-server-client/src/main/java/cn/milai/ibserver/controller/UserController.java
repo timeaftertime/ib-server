@@ -1,6 +1,6 @@
 package cn.milai.ibserver.controller;
 
-import cn.milai.common.api.Resp;
+import cn.milai.common.decoupling.Resp;
 import cn.milai.ibserver.service.dto.LoginReq;
 import cn.milai.ibserver.service.dto.LoginResp;
 

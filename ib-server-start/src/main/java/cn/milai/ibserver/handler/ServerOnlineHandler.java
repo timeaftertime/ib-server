@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
-import cn.milai.common.api.Resp;
+import cn.milai.common.decoupling.Resp;
 import cn.milai.ibserver.IBServerException;
 import cn.milai.ibserver.conf.RedisKey;
 import cn.milai.ibserver.service.UserService;

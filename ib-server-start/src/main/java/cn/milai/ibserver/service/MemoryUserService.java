@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
-import cn.milai.common.api.Resp;
 import cn.milai.common.base.Digests;
 import cn.milai.common.base.Randoms;
+import cn.milai.common.decoupling.Resp;
 import cn.milai.ibserver.service.dto.LoginReq;
 import cn.milai.ibserver.service.dto.LoginResp;
 

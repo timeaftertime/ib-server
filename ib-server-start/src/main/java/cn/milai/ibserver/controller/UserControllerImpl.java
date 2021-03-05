@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.milai.common.api.Resp;
+import cn.milai.common.decoupling.Resp;
 import cn.milai.ibserver.service.UserService;
 import cn.milai.ibserver.service.dto.LoginReq;
 import cn.milai.ibserver.service.dto.LoginResp;
