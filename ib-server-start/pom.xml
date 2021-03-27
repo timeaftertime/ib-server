@@ -2,8 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>cn.milai</groupId>
-		<artifactId>ib-server</artifactId>
+		<groupId>cn.milai.ibserver</groupId>
+		<artifactId>ib-server-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>ib-server-start</artifactId>
@@ -31,11 +31,11 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>cn.milai</groupId>
+			<groupId>cn.milai.ibserver</groupId>
 			<artifactId>ib-server-client</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>cn.milai</groupId>
+			<groupId>cn.milai.nexus</groupId>
 			<artifactId>nexus-core</artifactId>
 		</dependency>
 		<dependency>

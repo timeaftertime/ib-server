@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>cn.milai</groupId>
-	<artifactId>ib-server</artifactId>
+	<groupId>cn.milai.ibserver</groupId>
+	<artifactId>ib-server-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -60,18 +60,23 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>cn.milai</groupId>
+				<groupId>cn.milai.beginning</groupId>
 				<artifactId>beginning-decoupling</artifactId>
 				<version>${beginning.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>cn.milai</groupId>
+				<groupId>cn.milai.nexus</groupId>
 				<artifactId>nexus-core</artifactId>
 				<version>${nexus.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>cn.milai</groupId>
+				<groupId>cn.milai.ibserver</groupId>
 				<artifactId>ib-server-client</artifactId>
+				<version>${ib.server.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cn.milai.ibserver</groupId>
+				<artifactId>ib-server-start</artifactId>
 				<version>${ib.server.version}</version>
 			</dependency>
 		</dependencies>
