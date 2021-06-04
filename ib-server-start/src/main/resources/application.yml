@@ -1,10 +1,0 @@
-spring:
-  application:    name: ib-server
-  profiles:
-    active:
-    - dev  redis:    host: localhost
-    port: 6379
-server:  port: 80
-    
-nexus:  port: 8000
-  mode: server

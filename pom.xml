@@ -15,6 +15,7 @@
 	<properties>
 		<beginning.version>0.0.3-SNAPSHOT</beginning.version>
 		<nexus.version>0.0.3-SNAPSHOT</nexus.version>
+		<ib.version>1.0.4-SNAPSHOT</ib.version>
 		<ib.server.version>0.0.1-SNAPSHOT</ib.server.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -71,19 +72,46 @@
 			</dependency>
 			<dependency>
 				<groupId>cn.milai.ibserver</groupId>
-				<artifactId>ib-server-client</artifactId>
+				<artifactId>ib-server-clientapi</artifactId>
 				<version>${ib.server.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>cn.milai.ibserver</groupId>
-				<artifactId>ib-server-start</artifactId>
+				<artifactId>ib-server-base</artifactId>
 				<version>${ib.server.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cn.milai.ibserver</groupId>
+				<artifactId>ib-server-landvsair</artifactId>
+				<version>${ib.server.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cn.milai.ibserver</groupId>
+				<artifactId>ib-server-landvsair-clientapi</artifactId>
+				<version>${ib.server.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cn.milai.ib</groupId>
+				<artifactId>ib-api</artifactId>
+				<version>${ib.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cn.milai.ib</groupId>
+				<artifactId>ib-start</artifactId>
+				<version>${ib.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cn.milai.ib</groupId>
+				<artifactId>ib-container</artifactId>
+				<version>${ib.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<modules>
-		<module>ib-server-start</module>
-		<module>ib-server-client</module>
+		<module>ib-server-base</module>
+		<module>ib-server-clientapi</module>
+		<module>ib-server-landvsair</module>
+		<module>ib-server-landvsair-clientapi</module>
 	</modules>
 </project>
